@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import ru.skill_branch.dev_intensive.extensions.*
-import ru.skill_branch.dev_intensive.model.User
+import ru.skill_branch.dev_intensive.model.*
 import java.util.*
 
 /**
@@ -78,5 +78,20 @@ class ExampleUnitTest {
 
       var  userView = user.toUserView()
         userView.printMe()
+    }
+
+    @Test
+    fun test_abstract_factory(){
+        val user = User.makeUser("Alex Nick")
+        val txtMessage = BaseMessage.makeMessage(user, Chat("0"),payload = "any text", type = "text")
+        val imgMessage = BaseMessage.makeMessage(user, Chat("0"),payload = "any image url", type = "image")
+
+        when(txtMessage){
+            is TextMessage -> println("text message")
+            is ImageMessage -> println("image message")
+        }
+
+        txtMessage.formatMessage()
+        imgMessage.formatMessage()
     }
 }
