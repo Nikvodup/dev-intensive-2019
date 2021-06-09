@@ -49,6 +49,7 @@
             android:layout_marginBottom="@dimen/font_normal_16"/>
 
         <ImageView
+            android:id="@+id/iv_sender"
             android:layout_width="@dimen/spacing_large_24"
             android:layout_height="@dimen/spacing_large_24"
             android:src="@drawable/ic_baseline_send_24"/>
