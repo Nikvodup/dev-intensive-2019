@@ -1,20 +1,20 @@
-package ru.skill_branch.dev_intensive
+package ru.skill_branch.dev_intensive.ui.profile
 
 
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile.*
+import ru.skill_branch.dev_intensive.R
 import ru.skill_branch.dev_intensive.model.Bender
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var benderImage:ImageView
     lateinit var textTxt:TextView
@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_profile)
 
-       //  benderImage = findViewById(R.id.iv_bender) as ImageView
-           benderImage = iv_bender
+        //  benderImage = findViewById(R.id.iv_bender) as ImageView
+        benderImage = iv_bender
         textTxt = tv_text
         messageET = et_message
         sendBtn = iv_sender
@@ -64,10 +64,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Log.d("M_MainActivity","onResume")
     }
 
-   override fun onPause(){
-       super.onPause()
-       Log.d("M_MainActivity","onPause")
-   }
+    override fun onPause(){
+        super.onPause()
+        Log.d("M_MainActivity","onPause")
+    }
 
     override fun onStop() {
         super.onStop()
@@ -88,8 +88,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        if(v?.id==R.id.iv_sender){
-          val (phrase,color)= benderObj.listenAnswer(messageET.text.toString().toLowerCase())
+        if(v?.id== R.id.iv_sender){
+            val (phrase,color)= benderObj.listenAnswer(messageET.text.toString().toLowerCase())
             messageET.setText("")
             val (r,g,b) = color
             textTxt.text=phrase
