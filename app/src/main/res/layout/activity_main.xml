@@ -24,7 +24,7 @@
         android:id="@+id/iv_bender"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/bander_dance2"
+        android:src="@drawable/bender_dance2"
         android:layout_weight="1"/>
 
 
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         android:background="@color/color_primary"
-        android:layout_marginTop="@dimen/font_normal_16">
+        android:layout_marginTop="@dimen/spacing_normal_16">
 
         <EditText
             android:id="@+id/et_message"
@@ -43,16 +43,18 @@
             android:lines="1"
             android:textColor="@color/color_gray_light"
             android:hint="Введите текст"
-            android:paddingTop="@dimen/font_normal_16"
-            android:paddingBottom="@dimen/font_normal_16"
-            android:layout_marginTop="@dimen/font_normal_16"
-            android:layout_marginBottom="@dimen/font_normal_16"/>
+            android:paddingTop="@dimen/spacing_normal_16"
+            android:paddingBottom="@dimen/spacing_normal_16"
+            android:layout_marginLeft="@dimen/spacing_normal_16"
+            android:layout_marginRight="@dimen/spacing_normal_16"/>
 
         <ImageView
             android:id="@+id/iv_sender"
             android:layout_width="@dimen/spacing_large_24"
             android:layout_height="@dimen/spacing_large_24"
-            android:src="@drawable/ic_baseline_send_24"/>
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/spacing_normal_16"/>
 
     </LinearLayout>
 
