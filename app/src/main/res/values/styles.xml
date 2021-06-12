@@ -7,4 +7,64 @@
         <item name="colorAccent">@color/color_accent</item>
     </style>
 
+    <style name="Profile">
+
+    </style>
+
+    <style name="Profile.EditText" parent="Profile">
+        <item name="android:layout_toRightOf">@+id/avatar_default</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_normal_16</item>
+    </style>
+
+    <style name="Profile.EditText.Single" parent="Profile">
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="Profile.EditText.Multiline" parent="Profile">
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:maxLength">128</item>
+    </style>
+
+
+    <style name="Profile.Header" parent="Profile">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Profile.Header.Nickname" parent="Profile.Header">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_large_24</item>
+        <item name="android:layout_marginTop">@dimen/spacing_normal_16</item>
+    </style>
+
+
+    <style name="Profile.Header.Rank" parent="Profile.Header">
+
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_normal_16</item>
+    </style>
+
+    <style name="Profile.Metrix" parent="Profile">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="Profile.Metrix.Label" parent="Profile.Metrix">
+        <item name="android:textSize">@dimen/font_normal_16</item>
+    </style>
+
+    <style name="Profile.Metrix.Value" parent="Profile.Metrix">
+        <item name="android:textSize">@dimen/font_large_24</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Profile.InfoItem">
+        <item name="android:paddingTop">@dimen/spacing_normal_16</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingRight">@dimen/spacing_normal_16</item>
+        <item name="android:paddingLeft">@dimen/spacing_normal_16</item>
+        <item name="android:minHeight">72dp</item>
+    </style>
 </resources>
