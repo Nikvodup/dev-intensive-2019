@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view5"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -104,7 +105,7 @@
         style="@style/Profile.Metrix.Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:layout_editor_absoluteX="40dp" />
@@ -115,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="0"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:layout_editor_absoluteX="262dp" />
 
@@ -124,7 +125,7 @@
         style="@style/Profile.Metrix.Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/profile_label_rating"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.56"
@@ -136,7 +137,7 @@
         style="@style/Profile.Metrix.Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/profile_label_respect"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -165,13 +166,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:hint="имя" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
@@ -179,8 +181,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:layout_height="46dp"
+            android:hint="фамилия" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
@@ -188,7 +190,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginStart="72dp"
-        android:layout_marginEnd="16dp"
+        android:background="@color/color_gray_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -197,8 +199,73 @@
         android:id="@+id/imageView7"
         android:layout_width="@dimen/btn_round_size_40"
         android:layout_height="@dimen/btn_round_size_40"
-        app:srcCompat="@drawable/ic_about_24"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="458dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:srcCompat="@drawable/ic_about_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="о себе" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="72dp"
+        android:background="@color/color_gray_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/btn_round_size_40"
+        android:layout_height="@dimen/btn_round_size_40"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:srcCompat="@drawable/ic_repo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="репозиторий" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout4"
+        app:srcCompat="@drawable/ic_eye_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
