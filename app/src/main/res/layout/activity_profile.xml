@@ -26,10 +26,11 @@
 
 
             <ImageButton
+                android:id="@+id/btn_edit"
                 android:layout_width="@dimen/btn_round_size_40"
                 android:layout_height="@dimen/btn_round_size_40"
                 android:background="@drawable/btn_round_bg"
-                android:src="@drawable/ic_edit_black_24"
+                android:src="@drawable/btn_edit"
                 android:layout_toLeftOf="@id/iv_avatar"
                 android:layout_marginRight="@dimen/spacing_huge_32"
                 android:layout_marginTop="36dp"/>
@@ -44,6 +45,7 @@
                 />
 
             <ImageButton
+                android:id="@+id/btn_switch_day"
                 android:layout_width="@dimen/btn_round_size_40"
                 android:layout_height="@dimen/btn_round_size_40"
                 android:background="@drawable/btn_round_bg"
@@ -80,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/color_primary_light">
+        android:background="?attr/colorAccentedSurface">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -102,6 +104,7 @@
                 android:layout_marginLeft="@dimen/spacing_huge_32"/>
 
             <TextView
+                android:id="@+id/tv_rating"
                 style="@style/Profile.Metrix.Label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,7 +121,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/font_normal_16"
             android:layout_marginBottom="@dimen/spacing_normal_16"
-            android:background="@color/color_divider_light"/>
+            android:background="?attr/colorDivider"/>
 
 
         <LinearLayout
@@ -142,6 +145,7 @@
                 android:layout_marginLeft="@dimen/spacing_huge_32"/>
 
             <TextView
+                android:id="@+id/tv_respect"
                 style="@style/Profile.Metrix.Label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -216,7 +220,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/spacing_normal_16"
             android:hint="@string/profile_hint_about"
-            android:inputType="textMultiLine"/>
+            android:inputType="textMultiLine"
+
+            app:counterMaxLength="128"/>
 
 
     </LinearLayout>
@@ -257,8 +263,10 @@
 
 
         <ImageView
+            android:id="@+id/ic_eye"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginLeft="@dimen/spacing_normal_16"
             android:src="@drawable/ic_eye_24"
             tools:background="@color/color_accent"
             android:layout_gravity="center_vertical"/>
